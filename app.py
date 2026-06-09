@@ -65,12 +65,17 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
+# অ্যাপের মূল হেডার (ছবিসহ)
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    if os.path.exists("logo.png"):
+        st.image("logo.png", use_container_width=True)
+    elif os.path.exists("logo.jpg"):
+        st.image("logo.jpg", use_container_width=True)
 
-# অ্যাপের মূল হেডার
-st.markdown('<div class="main-title"> আরিয়ান টেলিকম</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-title">দোকানের মালামাল বাকী দেওয়া সম্পূর্ন  নিষেধ</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">🔌 আরিয়ান টেলিকম</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-title">দোকানের মালামাল ও বেচাকেনার ডিজিটাল হিসাব ব্যবস্থাপক</div>', unsafe_allow_html=True)
 st.write("---")
-
 df = load_data()
 
 # সাইডবার ডিজাইন
