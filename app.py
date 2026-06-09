@@ -14,7 +14,7 @@ def save_data(df):
     df.to_csv(DATA_FILE, index=False)
 
 # --- সুন্দর ডিজাইনের জন্য কাস্টম CSS ---
-st.set_page_config(page_title="আরিয়ান টেলিকম", page_icon="🔌", layout="wide")
+st.set_page_config(page_title="আরিয়ান টেলিকম", layout="wide")
 
 st.markdown("""
     <style>
@@ -67,8 +67,8 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # অ্যাপের মূল হেডার
-st.markdown('<div class="main-title">🔌 আরিয়ান টেলিকম</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-title">দোকানের মালামাল ও বেচাকেনার ডিজিটাল হিসাব ব্যবস্থাপক</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title"> আরিয়ান টেলিকম</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-title">দোকানের মালামাল বাকী দেওয়া সম্পূর্ন  নিষেধ</div>', unsafe_allow_html=True)
 st.write("---")
 
 df = load_data()
