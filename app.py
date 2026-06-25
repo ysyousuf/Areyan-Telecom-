@@ -89,8 +89,10 @@ if choice == "📦 বর্তমান স্টক দেখুন":
         st.warning("দোকানে এখনও কোনো মালামাল যোগ করা হয়নি। বামদিকের মেনু থেকে যোগ করুন।")
     else:
         # টেবিলটি সুন্দর করে দেখানোর জন্য
-        st.dataframe(df.style.background_gradient(cmap='YlOrRd', subset=["স্টক (পরিমাণ)"]), use_container_width=True)
-
+st.dataframe(
+        df.style.background_gradient(cmap='YlOrRd', subset=["স্টক (পরিমাণ)"]), 
+        use_container_width=True
+    )
 # --- ২. নতুন মালামাল যোগ করুন ---
 elif choice == "➕ নতুন মালামাল যোগ করুন":
     st.markdown("### 📥 নতুন মালামাল এন্ট্রি ফরম")
